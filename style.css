@@ -1,0 +1,159 @@
+
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+/* CUSTOM PROPERTIES */
+
+/* COLORS */
+:root {
+    --clr-bg:#FAFAF9;
+    --clr-white: #FFF;
+    --clr-grey: #6C727F;
+    --clr-light-grey: #E5EAF0;
+    --clr-heading: #20293A;
+    --clr-tag: #883AE1;
+    --clr-tag-bg: #E6D6FC;
+
+/* TYPOGRAPHY */
+    --ff-sora: "Sora", sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 600;
+    --fs-big: 1.125rem;
+    --fs-regular: .875rem;
+    --fs-small: .75rem;
+    --fs-extra-small: .625rem;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    background-color: var(--clr-bg);
+    color: var(--clr-grey);
+    font-family: var(--ff-sora);
+    font-size: var(--fs-regular);
+    padding: 1rem;
+}
+
+.card {
+    max-width: 20rem;
+    background-color: var(--clr-white);
+    border-radius: 12px;
+    padding-block: 1rem;
+}
+
+.card > * {
+    padding-inline: 1rem;
+}
+
+.blog-image {
+    border-radius: 12px;
+}
+
+.subject-tag {
+    display: inline-block;
+    background-color: var(--clr-tag-bg);
+    color: var(--clr-tag);
+    padding: .3em 2em;
+    border-radius: 20px;
+    font-size: var(--fs-extra-small);
+    font-weight: var(--fw-bold);
+    margin-block: 1rem;
+    margin-inline-start: 1rem;
+}
+
+.blog-title {
+    color: var(--clr-heading);
+    font-size: var(--fs-big);
+    font-weight: var(--fw-bold);
+}
+
+.preview {
+    padding-inline-end: 1.5rem;
+    padding-block-end: 1rem;
+    line-height: 1.6;
+    margin: .4rem 0 1rem 0;
+    border-bottom: 1px solid var(--clr-light-grey);
+}
+
+
+.blog-author {
+    font-size: var(--fs-small);
+    margin: .5rem 0;
+}
